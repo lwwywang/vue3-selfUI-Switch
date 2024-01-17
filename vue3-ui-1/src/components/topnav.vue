@@ -13,7 +13,7 @@ import { Ref, inject } from 'vue';
 
 export default {
     setup() {
-        const asideVisible = inject<Ref<boolean>>('xxx')
+        const asideVisible = inject<Ref<boolean>>('asideVisible')
         const ToggleMenu = () => {
             asideVisible.value = !asideVisible.value
         }
