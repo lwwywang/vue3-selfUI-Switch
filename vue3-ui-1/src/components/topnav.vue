@@ -19,6 +19,8 @@ export default {}
     padding: 16px;
     display: flex;
     background: pink;
+    position: relative;
+    z-index: 10;
 
     >.logo {
         max-width: 6em;
