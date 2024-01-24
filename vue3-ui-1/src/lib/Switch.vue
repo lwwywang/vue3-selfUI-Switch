@@ -1,5 +1,5 @@
 <template>
-    <button @click="toggle" :class="{ checked: value }">
+    <button class="liwen-switch" @click="toggle" :class="{ 'liwen-checked': value }">
         <span> </span>
     </button>
 </template>
@@ -21,11 +21,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
 
-button {
+.liwen-switch {
     height: $h;
     width: $h * 2;
     border: none;
@@ -45,7 +45,7 @@ button {
     }
 
 
-    &.checked {
+    &.liwen-checked {
         background: #1890ff;
 
         >span {
@@ -63,10 +63,11 @@ button {
         }
     }
 
-    &.checked:active {
+    &.liwen-checked:active {
         >span {
             width: $h2 + 4px;
             margin-left: -4px;
         }
     }
-}</style>
+}
+</style>

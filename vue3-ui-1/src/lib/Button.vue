@@ -1,5 +1,5 @@
 <template>
-    <button class="liwen-button" :class="{ [`theme-${theme}`]: theme }">
+    <button class="liwen-button" :class="{ [`liwen-theme-${theme}`]: theme }">
         <slot />
     </button>
 </template>
@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
@@ -54,4 +54,5 @@ $radius: 4px;
     &::-moz-focus-inner {
         border: 0;
     }
-}</style>
+}
+</style>
