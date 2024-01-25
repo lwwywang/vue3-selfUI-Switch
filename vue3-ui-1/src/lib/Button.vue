@@ -1,5 +1,6 @@
 <template>
     <button class="liwen-button" :class="classes" :disabled="disabled">
+        <span v-if="loading" class="liwen-loadingIndicator"></span>
         <slot />
     </button>
 </template>
@@ -24,6 +25,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        loading: {
+            type: Boolean,
+            default: false
+        }
     },
     setup(props) {
         const { theme, size, level } = props;
@@ -168,4 +173,27 @@ $grey: grey;
             color: $grey;
         }
     }
-}</style>
+
+    >.liwen-loadingIndicator {
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        margin-right: 4px;
+        border-radius: 8px;
+        border-color: $blue $blue $blue transparent;
+        border-style: solid;
+        border-width: 2px;
+        animation: liwen-spin 1s infinite linear;
+    }
+
+    @keyframes liwen-spin {
+        0% {
+            transform: rotate(0deg)
+        }
+
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+}
+</style>
