@@ -98,6 +98,29 @@ $grey: grey;
         }
     }
 
+    &.liwen-theme-text {
+        border-color: transparent;
+        box-shadow: none;
+        color: inherit;
+
+        &:hover,
+        &:focus {
+            background: darken(white, 5%);
+        }
+    }
+
+    &.liwen-size-big {
+        font-size: 24px;
+        height: 48px;
+        padding: 0 16px;
+    }
+
+    &.liwen-size-small {
+        font-size: 12px;
+        height: 20px;
+        padding: 0 4px;
+    }
+
     &.liwen-theme-button {
         &.liwen-level-main {
             background: $blue;
@@ -195,5 +218,4 @@ $grey: grey;
             transform: rotate(360deg)
         }
     }
-}
-</style>
+}</style>
