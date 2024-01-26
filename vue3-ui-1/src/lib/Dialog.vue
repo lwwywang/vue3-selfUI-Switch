@@ -1,23 +1,32 @@
 <template>
-    <div class="liwen-dialog-overlay"></div>
-    <div class="liwen-dialog-wrapper">
-        <div class="liwen-dialog">
-            <header>标题</header>
-            <main>
-                <p>第一行字</p>
-                <p>第二行字</p>
-            </main>
-            <footer>
-                <Button>ok</Button>
-                <Button>cancel</Button>
-            </footer>
+    <template v-if="visible">
+        <div class="liwen-dialog-overlay"></div>
+        <div class="liwen-dialog-wrapper">
+            <div class="liwen-dialog">
+                <header>标题</header>
+                <main>
+                    <p>第一行字</p>
+                    <p>第二行字</p>
+                </main>
+                <footer>
+                    <Button>ok</Button>
+                    <Button>cancel</Button>
+                </footer>
+            </div>
         </div>
-    </div>
+    </template>
 </template>
+    
 
 <script lang="ts">
 import Button from "./Button.vue"
 export default {
+    props: {
+        visible: {
+            type: Boolean,
+            default: false
+        }
+    },
     components: { Button }
 }
 </script>
