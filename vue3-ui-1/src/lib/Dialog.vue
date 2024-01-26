@@ -1,16 +1,20 @@
 <template>
     <template v-if="visible">
-        <div class="liwen-dialog-overlay"></div>
+        <div class="liwen-dialog-overlay" @click="onClickOverlay"></div>
         <div class="liwen-dialog-wrapper">
             <div class="liwen-dialog">
-                <header>标题</header>
+                <header>标题
+                    <span @click="close" class="liwen-dialog-close">
+
+                    </span>
+                </header>
                 <main>
                     <p>第一行字</p>
                     <p>第二行字</p>
                 </main>
                 <footer>
-                    <Button>ok</Button>
-                    <Button>cancel</Button>
+                    <Button @click="ok">ok</Button>
+                    <Button @click="cancel">cancel</Button>
                 </footer>
             </div>
         </div>
@@ -25,9 +29,44 @@ export default {
         visible: {
             type: Boolean,
             default: false
+        },
+        closeonClickOverlay: {
+            type: Boolean,
+            default: true
+        },
+        ok: {
+            type: Function
+        },
+        cancel: {
+            type: Function
         }
     },
-    components: { Button }
+    components: { Button },
+    setup(props, context) {
+        const close = () => {
+            context.emit('update:visible', false)
+        }
+        const onClickOverlay = () => {
+            if (props.closeonClickOverlay) {
+                close()
+            }
+        }
+        const ok = () => {
+            if (props.ok?.() !== false) {
+                close()
+            }
+        }
+        const cancel = () => {
+            context.emit('cancel')
+            close()
+        }
+        return {
+            close,
+            onClickOverlay,
+            ok,
+            cancel
+        }
+    }
 }
 </script>
 
