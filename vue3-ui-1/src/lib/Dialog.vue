@@ -3,14 +3,13 @@
         <div class="liwen-dialog-overlay" @click="onClickOverlay"></div>
         <div class="liwen-dialog-wrapper">
             <div class="liwen-dialog">
-                <header>标题
+                <header>
+                    <slot name="title" />
                     <span @click="close" class="liwen-dialog-close">
-
                     </span>
                 </header>
                 <main>
-                    <p>第一行字</p>
-                    <p>第二行字</p>
+                    <slot name="content" />
                 </main>
                 <footer>
                     <Button @click="ok">ok</Button>
