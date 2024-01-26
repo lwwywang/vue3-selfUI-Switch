@@ -1,22 +1,24 @@
 <template>
     <template v-if="visible">
-        <div class="liwen-dialog-overlay" @click="onClickOverlay"></div>
-        <div class="liwen-dialog-wrapper">
-            <div class="liwen-dialog">
-                <header>
-                    <slot name="title" />
-                    <span @click="close" class="liwen-dialog-close">
-                    </span>
-                </header>
-                <main>
-                    <slot name="content" />
-                </main>
-                <footer>
-                    <Button @click="ok">ok</Button>
-                    <Button @click="cancel">cancel</Button>
-                </footer>
+        <Teleport to="body">
+            <div class="liwen-dialog-overlay" @click="onClickOverlay"></div>
+            <div class="liwen-dialog-wrapper">
+                <div class="liwen-dialog">
+                    <header>
+                        <slot name="title" />
+                        <span @click="close" class="liwen-dialog-close">
+                        </span>
+                    </header>
+                    <main>
+                        <slot name="content" />
+                    </main>
+                    <footer>
+                        <Button @click="ok">ok</Button>
+                        <Button @click="cancel">cancel</Button>
+                    </footer>
+                </div>
             </div>
-        </div>
+        </Teleport>
     </template>
 </template>
     
