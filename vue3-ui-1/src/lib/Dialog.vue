@@ -31,7 +31,7 @@ export default {
             type: Boolean,
             default: false
         },
-        closeonClickOverlay: {
+        closeOnClickOverlay: {
             type: Boolean,
             default: true
         },
@@ -48,7 +48,7 @@ export default {
             context.emit('update:visible', false)
         }
         const onClickOverlay = () => {
-            if (props.closeonClickOverlay) {
+            if (props.closeOnClickOverlay) {
                 close()
             }
         }
@@ -58,7 +58,7 @@ export default {
             }
         }
         const cancel = () => {
-            context.emit('cancel')
+            props.cancel?.()
             close()
         }
         return {
