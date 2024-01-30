@@ -25,7 +25,6 @@ export default {
 
 <style lang="scss" scoped>
 .topnav {
-    background: pink;
     display: flex;
     padding: 16px;
     position: fixed;
@@ -54,7 +53,6 @@ export default {
     >.toggleAside {
         width: 24px;
         height: 24px;
-        background: red;
         position: absolute;
         left: 16px;
         top: 50%;
@@ -75,4 +73,5 @@ export default {
             display: inline-block;
         }
     }
-}</style>
+}
+</style>
