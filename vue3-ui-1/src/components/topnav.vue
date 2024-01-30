@@ -1,8 +1,11 @@
 <template>
     <div class="topnav">
-        <div class="logo" @click="ToggleMenu"><svg class="icon">
+        <router-link to="/" class="logo" @click="ToggleMenu">
+            <svg class="icon">
                 <use xlink:href="#icon-king"></use>
-            </svg></div>
+            </svg>
+        </router-link>
+
         <ul class="menu">
             <li>
                 <router-link to="/doc">文档</router-link>
@@ -16,6 +19,7 @@
 
 <script lang="ts">
 import { Ref, inject } from 'vue';
+import { RouterLink } from 'vue-router';
 
 export default {
     props: {
@@ -25,12 +29,13 @@ export default {
         }
     },
     setup() {
-        const asideVisible = inject<Ref<boolean>>('asideVisible')
+        const asideVisible = inject<Ref<boolean>>('asideVisible');
         const ToggleMenu = () => {
-            asideVisible.value = !asideVisible.value
-        }
-        return { ToggleMenu }
+            asideVisible.value = !asideVisible.value;
+        };
+        return { ToggleMenu };
     },
+    components: { RouterLink }
 };
 </script>
 
