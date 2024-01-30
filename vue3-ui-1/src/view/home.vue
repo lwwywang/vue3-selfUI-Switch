@@ -1,13 +1,26 @@
 <template>
-    <div class="topnavAndBanner">
-        <topnav />
-        <div class="banner">
-            <h1>Liwen的Vue3-UI框架</h1>
-            <h2>这是一个厉害的UI框架</h2>
-            <p class="actions">
-                <a href="https://github.com">Github</a>
-                <router-link to="/doc">开始</router-link>
-            </p>
+    <div>
+        <div class="topnavAndBanner">
+            <topnav />
+            <div class="banner">
+                <h1>Liwen的Vue3-UI框架</h1>
+                <h2>这是一个厉害的UI框架</h2>
+                <p class="actions">
+                    <a href="https://github.com">Github</a>
+                    <router-link to="/doc">开始</router-link>
+                </p>
+            </div>
+        </div>
+        <div class="features">
+            <svg class="icon">
+                <use xlink:href="#icon-Vue"></use>
+            </svg>
+            <svg class="icon">
+                <use xlink:href="#icon-TS"></use>
+            </svg>
+            <svg class="icon">
+                <use xlink:href="#icon-lights"></use>
+            </svg>
         </div>
     </div>
 </template>
@@ -25,6 +38,13 @@ $color: #007974;
 
 .topnavAndBanner {
     background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+}
+
+.features {
+    >svg {
+        width: 64px;
+        height: 64px;
+    }
 }
 
 .banner {
