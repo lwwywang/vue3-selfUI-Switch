@@ -24,7 +24,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$color: #007974;
+
 .topnav {
+    color: $color;
     display: flex;
     padding: 16px;
     position: fixed;
