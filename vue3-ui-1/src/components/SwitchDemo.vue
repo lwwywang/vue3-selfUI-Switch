@@ -10,7 +10,7 @@
                 <Button>查看代码</Button>
             </div>
             <div class="demo-code">
-                <pre>{{Switch1Demo.__sourceCode}}</pre>
+                <pre>{{ Switch1Demo.__sourceCode }}</pre>
             </div>
         </div>
         <div class="demo">
@@ -22,7 +22,7 @@
                 <Button>查看代码</Button>
             </div>
             <div class="demo-code">
-                <pre>{{Switch2Demo.__sourceCode}}</pre>
+                <pre>{{ Switch2Demo.__sourceCode }}</pre>
             </div>
         </div>
     </div>
@@ -47,9 +47,11 @@ export default {
     },
     setup() {
         const bool = ref(false)
-        return { bool,
-      Switch1Demo,
-      Switch2Demo }
+        return {
+            bool,
+            Switch1Demo,
+            Switch2Demo
+        }
     }
 }
 </script>
