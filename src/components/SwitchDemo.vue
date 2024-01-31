@@ -4,7 +4,7 @@
         <div class="demo">
             <h2>常规用法</h2>
             <div class="demo-component">
-                <Switch1Demo />
+                <component :is="Switch1Demo" />
             </div>
             <div class="demo-actions">
                 <Button>查看代码</Button>
@@ -16,7 +16,7 @@
         <div class="demo">
             <h2>支持 disabled </h2>
             <div class="demo-component">
-                <Switch2Demo />
+                <component :is="Switch2Demo" />
             </div>
             <div class="demo-actions">
                 <Button>查看代码</Button>
@@ -40,10 +40,7 @@ console.log(Switch1Demo.__sourceCode)
 
 export default {
     components: {
-        Switch,
-        Button,
-        Switch1Demo,
-        Switch2Demo,
+        Button
     },
     setup() {
         const bool = ref(false)
