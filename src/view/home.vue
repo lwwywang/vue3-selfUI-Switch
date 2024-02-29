@@ -1,16 +1,24 @@
 <template>
     <div>
+        <!--animation-container-->
+        <div class="animation-container">
+            <div class="back-mountain"></div>
+            <div class="front-mountain"></div>
+        </div>
+        <!--animation-container end-->
+
         <div class="topnavAndBanner">
             <topnav />
             <div class="banner">
-                <h1>Liwen的Vue3-UI框架</h1>
-                <h2>这是一个厉害的UI框架</h2>
+                <h1>山雪-UI框架</h1>
+                <h2>一个基于Vue3.0的UI框架</h2>
                 <p class="actions">
                     <a href="https://github.com">Github</a>
                     <router-link to="/doc">开始</router-link>
                 </p>
             </div>
         </div>
+
         <div class="features">
             <ul>
                 <li>
@@ -47,14 +55,96 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-$green: #02bcb0;
+$green: #87d6d9;
 $border-radius: 4px;
 $color: #007974;
 
 .topnavAndBanner {
-    background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+    background: linear-gradient(145deg, #c4dedf 0%, #9cb6b8 100%);
     clip-path: ellipse(80% 60% at 50% 40%);
 }
+
+.animation-container {
+    overflow: hidden;
+}
+
+
+
+.back-mountain,
+.front-mountain {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -100;
+}
+
+.back-mountain {
+    background: url(../img/back-mountain.png) center bottom repeat-x;
+    -webkit-animation: mountain 150s linear infinite;
+    animation: mountain 150s linear infinite;
+
+    @media (max-height: 640px) {
+        .back-mountain {
+            -webkit-background-size: 753px 240px;
+            background-size: 753px 240px;
+        }
+    }
+
+    @media (max-height: 496px) {
+        .back-mountain {
+            -webkit-background-size: 475px 180px;
+            background-size: 475px 180px;
+        }
+    }
+
+    @media (max-height: 400px) {
+        .back-mountain {
+            -webkit-background-size: 471px 150px;
+            background-size: 471px 150px;
+        }
+    }
+}
+
+.front-mountain {
+    background: url(../img/front-mountain.png) center bottom repeat-x;
+    -webkit-animation: mountain 100s linear infinite;
+    animation: mountain 100s linear infinite;
+
+    @media (max-height: 640px) {
+        .front-mountain {
+            -webkit-background-size: 660px 250px;
+            background-size: 660px 250px;
+        }
+    }
+
+    @media (max-height: 496px) {
+        .front-mountain {
+            -webkit-background-size: 501px 190px;
+            background-size: 501px 190px;
+        }
+    }
+
+    @media (max-height: 400px) {
+        .front-mountain {
+            -webkit-background-size: 422px 160px;
+            background-size: 422px 160px;
+        }
+    }
+}
+
+@keyframes mountain {
+    from {
+        background-position: center bottom;
+    }
+
+    to {
+        background-position: -300em bottom;
+    }
+}
+
 
 .features {
     margin: 64px auto;
@@ -107,7 +197,7 @@ $color: #007974;
             }
 
             >p {
-                grid-area: text
+                grid-area: text;
             }
         }
     }

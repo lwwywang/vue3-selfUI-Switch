@@ -7,7 +7,7 @@ import DialogDemo from "./components/DialogDemo.vue";
 import TabsDemo from "./components/TabsDemo.vue";
 import DocDemo from "./components/DocDemo.vue";
 import { h } from 'vue';
-import Markdown from './components/Markdown.vue';
+import Markdown from './components/markdown.vue';
 import intro from './markdown/Intro.md';
 import getStarted from './markdown/get-started.md';
 import install from './markdown/install.md';
