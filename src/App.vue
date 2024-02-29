@@ -3,9 +3,9 @@
 </template>
 
 <script lang="ts">
-import Liwen from './components/Liwen.vue'
 import { provide, ref } from 'vue'
 import {router} from './router'
+
 
 export default {
   name: 'App',

@@ -20,6 +20,7 @@
 <script lang="ts">
 import { Ref, inject } from 'vue';
 import { RouterLink } from 'vue-router';
+import { useDark, useToggle } from "@vueuse/core";
 
 export default {
     props: {
@@ -33,9 +34,11 @@ export default {
         const ToggleMenu = () => {
             asideVisible.value = !asideVisible.value;
         };
-        return { ToggleMenu };
+        const isDark = useDark();
+        const toggleDark = useToggle(isDark);
+        return { ToggleMenu, isDark, toggleDark };
     },
-    components: { RouterLink }
+    components: { RouterLink },
 };
 </script>
 
