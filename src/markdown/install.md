@@ -3,13 +3,13 @@
 打开终端运行下列命令：
 
 ```
-npm install liwen-ui
+npm install SX-ui
 ```
 
 或
 
 ```
-yarn add liwen-ui
+yarn add SX-ui
 ```
 
 下一节：[开始使用](#/doc/get-started)
