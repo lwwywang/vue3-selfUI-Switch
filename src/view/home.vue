@@ -13,7 +13,7 @@
                 <h1>山雪-UI框架</h1>
                 <h2>一个基于Vue3.0的UI框架</h2>
                 <p class="actions">
-                    <a href="https://github.com">Github</a>
+                    <a href="https://github.com/lwwywang/VUE3-SelfUI">Github地址</a>
                     <router-link to="/doc">开始</router-link>
                 </p>
             </div>
