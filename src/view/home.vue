@@ -82,7 +82,7 @@ $color: #007974;
 }
 
 .back-mountain {
-    background: url(../img/back-mountain.png) center bottom repeat-x;
+    background: url(../assets/back-mountain.png) center bottom repeat-x;
     -webkit-animation: mountain 150s linear infinite;
     animation: mountain 150s linear infinite;
 
@@ -109,7 +109,7 @@ $color: #007974;
 }
 
 .front-mountain {
-    background: url(../img/front-mountain.png) center bottom repeat-x;
+    background: url(../assets/front-mountain.png) center bottom repeat-x;
     -webkit-animation: mountain 100s linear infinite;
     animation: mountain 100s linear infinite;
 
