@@ -2,8 +2,8 @@
     <div>
         <!--animation-container-->
         <div class="animation-container">
-            <div class="back-mountain"></div>
-            <div class="front-mountain"></div>
+            <div :style="{ backgroundImage: `url(${BackMountain})` }" class="back-mountain"></div>
+            <div :style="{ backgroundImage: `url(${FrontMountain})` }" class="front-mountain"></div>
         </div>
         <!--animation-container end-->
 
@@ -50,8 +50,15 @@
 
 <script lang="ts">
 import topnav from "../components/topnav.vue"
+import BackMountain from "./back-mountain.png"
+import FrontMountain from "./front-mountain.png"
 export default {
-    components: { topnav }
+    components: { topnav },
+    data() {
+        return {
+            BackMountain, FrontMountain
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
