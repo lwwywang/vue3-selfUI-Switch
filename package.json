@@ -1,11 +1,11 @@
 {
-  "name": "shanxue-ui-1",
-  "version": "0.0.4",
+  "name": "shanxue",
+  "version": "0.0.1",
   "files": [
     "dist/lib/*"
   ],
-  "main": "dist/lib/shanxue-ui.js",
-  "module": "dist/lib/shanxue-ui.esm.js",
+  "main": "dist/lib/shanxue.js",
+  "module": "dist/lib/shanxue.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
