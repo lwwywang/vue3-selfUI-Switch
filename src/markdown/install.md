@@ -3,13 +3,13 @@
 打开终端运行下列命令：
 
 ```
-npm install SX-ui
+npm install shanxue
 ```
 
 或
 
 ```
-yarn add SX-ui
+yarn add shanxue
 ```
 
 下一节：[开始使用](#/doc/get-started)
